@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    background-color: blue;
+    padding: 16px 0;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img {
+    width: 75%;
+}
+
+.articles article { 
+    width: 30%;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2, .articles article {
+    margin-bottom: 16px;
+}
+
+section h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.articles article a{
+    background-color: yellowgreen;
+    color #fff;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+#entretenimento {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+#entretenimento .articles article a {
+    background-color: blue;
+}
+
+#entretenimento .articles article a {
+    background-color: greenyellow;
+    color #fff;
+}
+
+#tecnologia {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+#tecnologia .articles article a {
+    background-color: orangered;
+}
+
+#tecnologia .articles article a {
+    background-color: yellow;
+    color #fff;
+}
