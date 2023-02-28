@@ -1,32 +1,36 @@
 const form = document.getElementById('form-compare');
+const valorA = document.getElementById('CampoA');
 
-function validaPrimeiroValor(primeiroNumero) {
-    const primeiroComparar = primeiroNumero;
-    return primeiroComparar.value;
+function comparaValor() {
+    const valorB = document.getElementById('CampoB');
+
+    const mensagemSucesso = `O valor B de: <b>${valorB.value}</b> é maior que o valor A de: <b>${valorA.value}</b>`;
+
+    if(valorB.value > valorA.value) {
+        const containerMensagemSucesso = document.querySelector('.mensagem-sucesso');
+        containerMensagemSucesso.innerHTML = mensagemSucesso;
+        containerMensagemSucesso.style.display = 'block';
+    }else { 
+        valorA.style.border = '1px solid red';
+        document.querySelector('.mensagem-erro').style.display = 'block';
+    }
 }
 
-function validaSegundoValor(segundoNumero) {
-    const segundoComparar = segundoNumero;
-    return segundoComparar.value;
-}
+valorA.addEventListener ('keyup', function(e){
+    formEValido = comparaValor(e.target.value);
 
-form.addEventListener ('submit', function(e){
+    if(!comparaValor) {
+        valorA.classList.add('erro');
+        document.querySelector('.mensagem-erro').style.display = 'block';
+    } else {
+        valorA.classList.remove('erro')
+        document.querySelector('.mensagem-erro').style.display = 'none';
+    }
+})
+
+form.addEventListener('submit', function(e){
     let formEValido = false;
     e.preventDefault();
 
-    const primeiroValor = document.getElementById('numero1');
-    const segundoValor = document.getElementById('numero2');
-
-    const mensagemSucesso = `O segundo numero ${segundoValor.value} é maior que o primeiro numero ${primeiroValor.value}`;
-
-    formEValido = validaSegundoValor(segundoValor.value),validaPrimeiroValor(primeiroValor.value);
-
-    if(formEValido) {
-        alert(mensagemSucesso)
-
-        primeiroValor.value = '';
-        segundoValor.value = '';
-    }else {
-        alert("O primeiro valor é maior que o segundo!")
-    }
+    formEValido = comparaValor();
 })

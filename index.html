@@ -12,10 +12,14 @@
         <h1>EBAC exercício HTML_DOM</h1>
         <h2>Exercício</h2>
         <form id="form-compare">
-            <input type="number" id="numero1" required placeholder="Primeiro numero" />
-            <input type="number" id="numero2" required placeholder="Segundo numero"/>
-            <button type="submit" id="btn-comparar">Comparar</button>
+            <input type="number" id="CampoA" required placeholder="Primeiro numero" />
+            <p class = mensagem-erro>
+                Campo A deve ser menor que o Campo B!
+            </p>
+            <input type="number" id="CampoB" required placeholder="Segundo numero"/>
+            <button id="btn-comparar" type="submit" >Comparar</button>
         </form>
+        <p class = "mensagem-sucesso"></p>
     </div>
     <script src="./main.js"></script>
 </body>
