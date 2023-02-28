@@ -1,36 +1,39 @@
 const form = document.getElementById('form-compare');
-const valorA = document.getElementById('CampoA');
+const valorA = document.getElementById('campo-a');
+const valorB = document.getElementById('campo-b');
+let formEValido = false;
 
 function comparaValor() {
-    const valorB = document.getElementById('CampoB');
-
     const mensagemSucesso = `O valor B de: <b>${valorB.value}</b> é maior que o valor A de: <b>${valorA.value}</b>`;
 
     if(valorB.value > valorA.value) {
-        const containerMensagemSucesso = document.querySelector('.mensagem-sucesso');
-        containerMensagemSucesso.innerHTML = mensagemSucesso;
-        containerMensagemSucesso.style.display = 'block';
+       const containerMensagemSucesso = document.querySelector('.success-message');
+       containerMensagemSucesso.innerHTML = mensagemSucesso;
+       containerMensagemSucesso.style.display = 'block';
+
+        valorA.value = '';
+        valorB.value = '';
     }else { 
         valorA.style.border = '1px solid red';
-        document.querySelector('.mensagem-erro').style.display = 'block';
+        document.querySelector('.error-message').style.display = 'block';
     }
 }
 
-valorA.addEventListener ('keyup', function(e){
+valorA.addEventListener('keypress', function(e) {
+    console.log(e.target.value);
     formEValido = comparaValor(e.target.value);
 
-    if(!comparaValor) {
-        valorA.classList.add('erro');
-        document.querySelector('.mensagem-erro').style.display = 'block';
+    if(!formEValido) {
+        valorA.classList.add('error');
+        document.querySelector('.error-message').style.display = 'block';
     } else {
-        valorA.classList.remove('erro')
-        document.querySelector('.mensagem-erro').style.display = 'none';
+        valorA.classList.remove('error')
+        document.querySelector('.error-message').style.display = 'none';
     }
 })
 
 form.addEventListener('submit', function(e){
-    let formEValido = false;
     e.preventDefault();
 
-    formEValido = comparaValor();
+    formEValido = comparaValor(valorB.value, valorA.value);
 })
