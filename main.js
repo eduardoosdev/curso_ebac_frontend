@@ -23,7 +23,7 @@ valorA.addEventListener('keypress', function(e) {
     console.log(e.target.value);
     formEValido = comparaValor(e.target.value);
 
-    if(!formEValido) {
+    if(formEValido) {
         valorA.classList.add('error');
         document.querySelector('.error-message').style.display = 'block';
     } else {
