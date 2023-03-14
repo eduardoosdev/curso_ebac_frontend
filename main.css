@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald, sans-serif;
+}
+
+body {
+    margin-top: 100px;
+    background:linear-gradient(
+        90deg,
+        white, lightblue
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    border: 2px solid white;
+    padding: 30px 40px;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.container p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.form {
+    display: inline-block;
+}
+
+input{
+    padding: 4px 15px 4px 5px;
+}
+
+#botao-tarefa{
+    display: inline-block;
+    background-color: green;
+    color:#ffffff;
+    border-radius: 5px;
+    text-align:center;
+    margin-top:2px;
+    padding: 8px 15px;
+}
+
+#botao-tarefa:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+ul li {
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+ul li:nth-child(even) {
+    background-color: #dfdfdf;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+li:hover {
+    cursor: pointer;
+}
