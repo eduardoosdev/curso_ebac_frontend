@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+</head>
+<body>
+    <header>
+        <div class="container container-flex">
+            <h1>EBAC Cadastros</h1>
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <div class="container container-flex">
+                <ul>
+                    <li>
+                        <a href="#">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#">Cadastre seu cpf </a>
+                    </li>
+                    <li>
+                        <a href="#">Cadastre seu cep</a>
+                    </li>
+                    <li>
+                        <a href="#">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="carousel-images">
+        <img src="./arquivos/images/cadastro-cpf.jpg" alt="Cadastrar cpf">
+        <img src="./arquivos/images/cadastro-cep.png" alt="Cadastrar cep">
+    </div>
+    <section id="sobre-o-cadastro">
+        <div class="container container-flex">
+            <img src="./arquivos/images/cpf-info.jfif" alt="Imagem da loja">
+            <div>
+                <h2>Informações sobre o CPF</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aut expedita possimus vitae dolore incidunt atque, maxime ut ratione fugit deleniti ipsam, labore, error minima. Reiciendis illo ab earum in.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ea obcaecati temporibus mollitia ut totam, doloremque beatae sequi quo nesciunt quam quae, quibusdam hic id sunt saepe, ipsum quidem corrupti!</p>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em contato</h2>
+            <form>
+                <div class="form-campo">
+                    <label for="nome">some:</label>
+                    <input type="text" id="nome" name="nome">
+                </div><div class="form-campo">
+                    <label for="sobrenome">sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome">
+                </div>
+                <div class="form-campo">
+                    <label for="e-mail">e-mail:</label>
+                    <input type="email" id="e-mail" name="email">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+                <div class="form-campo">
+                    <label for="CPF">digite seu cpf:</label>
+                    <input type="number" id="cpf" name="cpf">
+                </div>
+                <div class="form-campo">
+                    <label for="CEP">digite seu cep:</label>
+                    <input type="number" id="cep" name="cep">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container container-flex">
+            <p>2023 &copy; EBAC cadastros - todos os direitos reservados</p>
+            <ul class="container-flex">
+                <li>
+                    <a href="#">
+                        <img src="./arquivos/icones/facebook.png" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./arquivos/icones/instagram.png" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./arquivos/icones/youtube.png" alt="youtube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
